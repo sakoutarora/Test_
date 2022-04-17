@@ -19,4 +19,8 @@ contract Simple_storae {
     function SetName(string memory _name) public {
         people_map[msg.sender].name = _name;
     }
+
+    function GetFavnumer() public view returns (uint256) {
+        return people_map[msg.sender]._favnumber;
+    }
 }
